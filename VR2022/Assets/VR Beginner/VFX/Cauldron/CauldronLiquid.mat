@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CauldronLiquid
+  m_Shader: {fileID: -6465566751694194690, guid: 5f67c1ec85f9f5b43aefba1aeb355db7,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2DLOD_78E1C77F_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 1b30e935cd9392841a8c65048733c5c4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2DLOD_9588c2d11236308f8276b4b7db2d3dce_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 1b30e935cd9392841a8c65048733c5c4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_615C1C_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_6CEDF4D9_Texture_1:
+        m_Texture: {fileID: 2800000, guid: bfd7f5946c523be43b9e0e827190dc71, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - SpeedMod: 100
+    - Vector1_1059C4E8: 0.256
+    - Vector1_A459030F: 1.6
+    m_Colors:
+    - Color_C6A9F26B: {r: 4.5947943, g: 2.2884681, b: 0.07216941, a: 1}
+  m_BuildTextureStacks: []

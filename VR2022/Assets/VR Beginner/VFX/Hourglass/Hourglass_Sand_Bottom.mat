@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hourglass_Sand_Bottom
+  m_Shader: {fileID: -6465566751694194690, guid: ce2717aa2700d094ebe6904931562da4,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_1D7B0E5B_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 4e87079a45ebeec4dbb19ace0120a26e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5EC06F3B_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 4e87079a45ebeec4dbb19ace0120a26e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_F034F756_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_4162C447_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 88c69030baf7952409122dbff1552768, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_d779949cb37e2b8e9ce51b3fb44b9a32_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 88c69030baf7952409122dbff1552768, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - InvertFlow: 0
+    - LiquidFill: 0
+    - TimerFill: 1
+    - Vector1_69DC66C: 30
+    - Vector1_7500305: 0.02
+    - Vector1_A0C096A0: 0.5
+    m_Colors:
+    - Color_E3091B1A: {r: 0.52594274, g: 0, b: 1, a: 0}
+    - Color_FDA61C50: {r: 0.475418, g: 0.1715023, b: 0.7735849, a: 0}
+  m_BuildTextureStacks: []

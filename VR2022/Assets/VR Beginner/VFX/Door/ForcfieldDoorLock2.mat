@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ForcfieldDoorLock2
+  m_Shader: {fileID: -6465566751694194690, guid: 3cfa4a6f8555e7d4ca3b69fed2ea29b7,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_6BA81466:
+        m_Texture: {fileID: 2800000, guid: c580343819db5c34db1683ffed6af825, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_3BFE1AE1_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 99f86e511bbb06e43abf42595d9bdc4b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_84c37d60e5404c84a0b64e69f18544c7_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 4c7d4bf7b6df63e499c6f57094d813ed, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_8E5249BE_Texture_1:
+        m_Texture: {fileID: 2800000, guid: e641fe8f6e3d246429dfd88baefe5d17, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_AB329A6E_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 4c7d4bf7b6df63e499c6f57094d813ed, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_D1D80A3F: 0
+    m_Colors:
+    - Color_D564B7FB: {r: 1, g: 0.7045615, b: 0, a: 1}
+  m_BuildTextureStacks: []

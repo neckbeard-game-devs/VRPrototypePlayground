@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LiquidOrange
+  m_Shader: {fileID: -6465566751694194690, guid: ee610ddab501d694c8ebe800e1326f98,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_50952327_Texture_1:
+        m_Texture: {fileID: 2800000, guid: b3cb09ce929834a40b7ea2bae07b9d0e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_74fbe8bae99288828636c24e7ddf1f4f_Texture_1:
+        m_Texture: {fileID: 2800000, guid: b3cb09ce929834a40b7ea2bae07b9d0e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - LiquidFill: 0.8
+    - Vector1_69DC66C: 30
+    - Vector1_7500305: 0.02
+    - Vector1_A0C096A0: 0.5
+    m_Colors:
+    - Color_E3091B1A: {r: 1, g: 0.6429825, b: 0, a: 0}
+    - Color_FDA61C50: {r: 0.9960785, g: 0.65882355, b: 0.12941177, a: 1}
+  m_BuildTextureStacks: []
