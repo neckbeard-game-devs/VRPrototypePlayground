@@ -50,7 +50,7 @@ public class GhostConClassic : MonoBehaviour
         {
             if (other.gameObject.CompareTag("navCol"))
             {
-                Debug.Log("navCol");
+                //Debug.Log("navCol");
                 for (int i = 0; i < navMeshCol.Length; i++)
                 {
                     if (other.gameObject == navMeshCol[i] && !setTargetBool)
@@ -63,7 +63,7 @@ public class GhostConClassic : MonoBehaviour
             }
             if (other.gameObject.CompareTag("npc"))
             {
-                Debug.Log("npc");
+                //Debug.Log("npc");
                 if (!setTargetBool)
                 {
                     setTargetBool = true;
@@ -72,7 +72,7 @@ public class GhostConClassic : MonoBehaviour
             }
             if (other.gameObject.CompareTag("playerCol"))
             {
-                Debug.Log("playerCol");
+                //Debug.Log("playerCol");
                 if (!attackBool)
                 {
                     attackBool = true;
@@ -81,7 +81,7 @@ public class GhostConClassic : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Player");
+                //Debug.Log("Player");
                 if (!hitPacmanBool)
                 {
                     hitPacmanBool = true;

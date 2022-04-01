@@ -30,7 +30,7 @@ public class JoyStickHinge : MonoBehaviour
         if (other.gameObject.CompareTag("hand"))
         {
             _hand = other.gameObject;
-            pacMan._grabbedBool = true;
+            pacMan.touchJoyBool = true;
             _grabbedBool = true; 
         }
 
@@ -57,7 +57,7 @@ public class JoyStickHinge : MonoBehaviour
     {
         if (other.gameObject.CompareTag("hand"))
         {
-            pacMan._grabbedBool = false;
+            pacMan.touchJoyBool = false;
             _grabbedBool = false;
             transform.rotation = startPos.rotation;
             pacMan.move.y = 0;

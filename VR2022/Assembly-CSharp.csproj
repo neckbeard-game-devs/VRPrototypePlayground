@@ -64,7 +64,7 @@
     <Compile Include="Assets\VR Beginner\Scripts\System\Interactables\ButtonInteractable.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Effects\FanRotation.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\UiCollision\UiAudioControl.cs" />
-    <Compile Include="Assets\3D_ Assets\atari\Joystick\JoyContVR.cs" />
+    <Compile Include="Assets\3D_ Assets\Atari\Joystick\JoystickScripts\JoyContVR.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\MagicReceiver.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Effects\SelectionOutline.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Effects\ShakeObject.cs" />
@@ -73,15 +73,18 @@
     <Compile Include="Assets\VR Beginner\Scripts\System\Interactables\DialInteractable.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\PotionReceiver.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\PotionSpawner.cs" />
+    <Compile Include="Assets\VR Beginner\Scripts\Gameplay\WitchHouseUIHook.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\System\AlignmentTrigger.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Effects\CauldronEffects.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\UiCollision\UiControl.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\player\XRPlayer.cs" />
     <Compile Include="Assets\3D_ Assets\PacMan\ExtraPacManArcadeStuff\PacManAssets\PacManScripts\GameControl.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\WatchScript.cs" />
     <Compile Include="Assets\3D_ Assets\PacMan\Scripts\GhostCon.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\Potion.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\System\Interactables\XROffsetGrabbable.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\UiCollision\UICombinationControl.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\DkBarrelControl.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\System\DebugController.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\Hourglass.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\CauldronContent.cs" />
@@ -90,6 +93,7 @@
     <Compile Include="Assets\VR Beginner\Scripts\Effects\TriggerAnimationEvent.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\MagicTractorBeam.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\XRExclusiveSocketInteractor.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\LadderCon.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\StationaryOnPull.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Effects\EmissionChange.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\UiCollision\UISliderControl.cs" />
@@ -103,17 +107,22 @@
     <Compile Include="Assets\VR Beginner\Scripts\System\Interactables\NewDial.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\UiCollision\UiCollider.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\System\Interactables\AxisDragInteractable.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\player\PlayerAudioCon.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\MasterController.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\System\SocketTarget.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\System\LookAt.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\player\LadderCollider.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\AnimParent.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\System\DisableInteractable.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\CauldronIngredient.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\HandPrefab.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\System\SetCenterOfMass.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Effects\ContactSoundPlayer.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\DkPlatformController.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Effects\TeleporterAnim.cs" />
     <Compile Include="Assets\3D_ Assets\PacMan\Scripts\GhostSpawner.cs" />
     <Compile Include="Assets\3D_ Assets\PacMan\ExtraPacManArcadeStuff\PacManAssets\PacManScripts\WarpCol.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\player\MarioController.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\System\ActivateRotatingInteractor.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Effects\LaserPointer.cs" />
     <Compile Include="Assets\3D_ Assets\PacMan\ExtraPacManArcadeStuff\PacManAssets\PacManScripts\JoyStickHinge.cs" />
@@ -123,7 +132,10 @@
     <Compile Include="Assets\3D_ Assets\PacMan\ExtraPacManArcadeStuff\PacManAssets\PacManScripts\SphereCol.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\EndingSequence.cs" />
     <Compile Include="Assets\VR Beginner\Scripts\Gameplay\IndestructableObj.cs" />
-    <Compile Include="Assets\VR Beginner\Scripts\Gameplay\WitchHouseUIHook.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\player\MarioVrController.cs" />
+    <Compile Include="Assets\3D_ Assets\Atari\Joystick\JoystickScripts\JoyContVRCollision.cs" />
+    <Compile Include="Assets\3D_ Assets\Atari\Joystick\JoystickScripts\NeckbeardsVrJoystick.cs" />
+    <Compile Include="Assets\3D_ Assets\DonkeyKong\DkScripts\DkBarrelSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
@@ -58,6 +59,8 @@ public class MasterController : MonoBehaviour
     InteractionLayerMask m_OriginalLeftMask;
     
     List<XRBaseInteractable> m_InteractableCache = new List<XRBaseInteractable>(16);
+    public bool fire, jump;
+    private MarioVrController tmc;
 
     void Awake()
     {
@@ -117,6 +120,8 @@ public class MasterController : MonoBehaviour
 
         if (m_Rig.CurrentTrackingOriginMode != TrackingOriginModeFlags.Floor)
             m_Rig.CameraYOffset = 1.8f;
+
+        tmc = FindObjectOfType<MarioVrController>();
     }
 
     void RegisterDevices(InputDevice connectedDevice)
@@ -150,7 +155,16 @@ public class MasterController : MonoBehaviour
     {
         Vector2 axisInput;
         m_RightInputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out axisInput);
-        
+        m_RightInputDevice.TryGetFeatureValue(CommonUsages.primaryButton, out fire);
+
+        if (fire)
+        {
+            if (!jump)
+            {
+                jump = true;
+                StartCoroutine(ButtonCountdown());
+            }
+        }
         m_RightLineVisual.enabled = axisInput.y > 0.5f;
         
         RightTeleportInteractor.interactionLayers = m_LastFrameRightEnable ? m_OriginalRightMask : new InteractionLayerMask();
@@ -193,7 +207,17 @@ public class MasterController : MonoBehaviour
     {
         Vector2 axisInput;
         m_LeftInputDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out axisInput);
-        
+
+        m_LeftInputDevice.TryGetFeatureValue(CommonUsages.primaryButton, out fire);
+
+        if (fire)
+        {
+            if (!jump)
+            {
+                jump = true;
+                StartCoroutine(ButtonCountdown());
+            }
+        }
         m_LeftLineVisual.enabled = axisInput.y > 0.5f;
         
         LeftTeleportInteractor.interactionLayers = m_LastFrameLeftEnable ? m_OriginalLeftMask : new InteractionLayerMask();
@@ -226,5 +250,13 @@ public class MasterController : MonoBehaviour
             m_LeftHandPrefab.Animator.SetBool("Pointing", m_PreviousLeftClicked);
         
         m_LastFrameLeftEnable = m_LeftLineVisual.enabled;
+    }
+
+    IEnumerator ButtonCountdown()
+    {
+        tmc.Jumping();
+        yield return new WaitForSeconds(1f);
+        jump = false;
+        //Debug.Log("Jumping MC");
     }
 }

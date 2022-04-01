@@ -6,28 +6,42 @@ public class PacManConClassic : MonoBehaviour
 {
     //move
     public JoyContVR joyCon;
+    public JoyContVRCollision joyCol;
     public Animator anim;
     public Vector3 position;
     public Vector2 move;
     public float moveSpeed = .02f;
-    public bool _grabbedBool, moveBool;
+    public bool touchJoyBool, moveBool, trackingBool;
     public AudioSource wakaSound;
     //rotate
     [SerializeField]
     private Quaternion[] rotations;
     public GameObject rotationGo;
 
-  
-
+    //universal collision or tracking based joystick & 0||1 player input
     void Update()
     {
+        if (trackingBool)
+        {
+            if (joyCon != null)
+            {
+                touchJoyBool = joyCon.touchJoyBool;
+                move.y = joyCon.yTilt;
+                move.x = joyCon.xTilt;
+            }
 
-        //universal collision based joystick & 0||1 player input
-        _grabbedBool = joyCon.touchJoyBool;
-        move.y = joyCon.yTilt;
-        move.x = joyCon.xTilt;
+        }
+        else
+        {
+            if (joyCol != null)
+            {
+                touchJoyBool = joyCol.touchJoyBool;
+                move.y = joyCol.yTilt;
+                move.x = joyCol.xTilt;
+            }
+        }
 
-        if (_grabbedBool)
+        if (touchJoyBool)
 
         {
             position = (move.y * moveSpeed * transform.forward) + (move.x * moveSpeed * transform.right);
@@ -52,6 +66,7 @@ public class PacManConClassic : MonoBehaviour
 
            
         }
+
         if (move.y == 1 || move.y == -1)
         {
             if (!moveBool)
@@ -80,5 +95,14 @@ public class PacManConClassic : MonoBehaviour
             }
 
         }
+    }
+
+    public void SetCollisionJoyStick()
+    {
+        trackingBool = false;
+    }
+    public void SetTrackingJoyStick()
+    {
+        trackingBool = true;
     }
 }
