@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ThumbStickDown",
+                    "type": "Value",
+                    "id": "ecdecd8e-2579-48dc-843b-7de1724325fc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -291,6 +300,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "RightHandGrab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a15ada35-9546-48fa-a90e-2c8c182cb57d",
+                    "path": "<OculusTouchController>/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XR",
+                    "action": "ThumbStickDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+// uncomment for new button setup
 //[ExecuteInEditMode]
 public class UiControl : MonoBehaviour
 {
-    private UiAudioControl uac;
-    private UICombinationControl ucc;
-    public Button[] testButtons, combinationButtons;
+    public UiAudioControl uac;
+
+    [SerializeField]
+    private UICombinationControl[] ucc;
+    public Button[] testButtons, combinationButtons, keyboardButtons;
     public bool SetUpButtonsBool, SetUpComboButtonsBool, pressButtonBool;
     public float width, height;
     public ColorBlock colors;
@@ -17,8 +19,7 @@ public class UiControl : MonoBehaviour
     public float waitTime = 1f;
     void Start()
     {
-        uac = FindObjectOfType<UiAudioControl>();
-        ucc = FindObjectOfType<UICombinationControl>();
+        ucc = GetComponentsInChildren<UICombinationControl>();
     }
 
     public void CollisionPress(int testButton)
@@ -28,8 +29,38 @@ public class UiControl : MonoBehaviour
     }
     public void CombinationPress(int testButton)
     {
+        Debug.Log("CombinationPress 0  " + testButton);
         bPress = new WaitForSeconds(waitTime);
+        Debug.Log("CombinationPress 1  ");
         StartCoroutine(CombinationButtonPressCountdown(testButton));
+        Debug.Log("CombinationPress 2  ");
+    }
+    IEnumerator KeyboardButtonPressCountdown0(int testButton)
+    {
+        Debug.Log("KeyboardPress 2  " + testButton);
+        pressButtonBool = true;
+        ucc[1].KeyboardButtonPressed(testButton);
+        Debug.Log("KeyboardPress 3  " + testButton);
+        colors = keyboardButtons[testButton].colors;
+        colors.normalColor = colors.pressedColor;
+        keyboardButtons[testButton].colors = colors;
+        keyboardButtons[testButton].onClick.Invoke();
+
+
+        
+        yield return bPress;
+        colors.normalColor = colors.highlightedColor;
+        keyboardButtons[testButton].colors = colors;
+        keyboardButtons[testButton].GetComponent<UiCollider>().pressedBool = false;
+        pressButtonBool = false;
+    }
+    public void KeyboardPress(int testButton)
+    {
+        Debug.Log("KeyboardPress 0  " + testButton);
+        bPress = new WaitForSeconds(waitTime);
+        Debug.Log("KeyboardPress 1  " + testButton);
+        StartCoroutine(KeyboardButtonPressCountdown0(testButton));
+        
     }
     public void Press0()
     {
@@ -70,12 +101,13 @@ public class UiControl : MonoBehaviour
     //}
     IEnumerator ButtonPressCountdown(int testButton)
     {
+        
         pressButtonBool = true;
         colors = testButtons[testButton].colors;
         colors.normalColor = colors.pressedColor;
         testButtons[testButton].colors = colors;
         testButtons[testButton].onClick.Invoke();
-
+        Debug.Log("KeyboardPress 3  " + testButton);
         yield return bPress;
         colors.normalColor = colors.highlightedColor;
         testButtons[testButton].colors = colors;
@@ -85,13 +117,13 @@ public class UiControl : MonoBehaviour
     IEnumerator CombinationButtonPressCountdown(int testButton)
     {
         pressButtonBool = true;
-        ucc.ComboButtonPressed(testButton);
+        ucc[0].ComboButtonPressed(testButton);
         colors = combinationButtons[testButton].colors;
         colors.normalColor = colors.pressedColor;
         combinationButtons[testButton].colors = colors;
         combinationButtons[testButton].onClick.Invoke();
 
-      
+
 
         yield return bPress;
         colors.normalColor = colors.highlightedColor;
@@ -100,6 +132,8 @@ public class UiControl : MonoBehaviour
         pressButtonBool = false;
     }
 
+
+    
     IEnumerator ButtonSetupCountdown()
     {
         for (int i = 0; i < testButtons.Length; i++)

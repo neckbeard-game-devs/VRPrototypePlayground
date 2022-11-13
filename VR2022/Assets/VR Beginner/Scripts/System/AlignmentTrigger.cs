@@ -30,11 +30,11 @@ public class AlignmentTrigger : MonoBehaviour
     }
 
     public AxisMatch[] RequiredMatch;
-    public UnityEvent OnEnterAligned;
-    public UnityEvent OnExitAligned;
 
     bool m_WasAligned = false;
 
+    public Camera mainCam;
+    public MagicTractorBeam mtb;
     // Update is called once per frame
     void Update()
     {
@@ -47,10 +47,9 @@ public class AlignmentTrigger : MonoBehaviour
             Vector3 worldLocal = transform.TransformVector(match.LocalAxis);
             Vector3 worldExternal;
 
-
             if (match.ExternalAxisMode == Mode.View)
             {
-                worldExternal =  MasterController.Instance.Rig.Camera.transform.TransformVector(match.ExternalAxis);
+                worldExternal = mainCam.transform.TransformVector(match.ExternalAxis);
             }
             else
             {
@@ -58,7 +57,6 @@ public class AlignmentTrigger : MonoBehaviour
             }
 
             float dot = Vector3.Dot(worldLocal, worldExternal);
-
             allMatch &= dot > 1.0f - match.Tolerance;
         }
 
@@ -66,7 +64,7 @@ public class AlignmentTrigger : MonoBehaviour
         {
             if (!m_WasAligned)
             {
-                OnEnterAligned.Invoke();
+               //mtb.EnableBeam();
                 m_WasAligned = true;
             }
         }
@@ -74,7 +72,7 @@ public class AlignmentTrigger : MonoBehaviour
         {
             if (m_WasAligned)
             {
-                OnExitAligned.Invoke();
+                //mtb.DisableBeam();
                 m_WasAligned = false;
             }
         }
